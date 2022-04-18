@@ -321,7 +321,44 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+/* .wedo a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
 
+  display: block;
+  width: 100%;
+  padding: 27px 15px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+
+  background-color: rgba(47, 48, 58, 0.8);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.wedo .item:nth-child(1) a:after {
+  content: "Десктопные приложения";
+}
+.wedo .item:nth-child(2) a:after {
+  content: "Мобильные приложения ";
+}
+.wedo .item:nth-child(3) a:after {
+  content: "Дизайнерские решения";
+}
+
+.wedo a:hover::after {
+  opacity: 1;
+  visibility: visible;
+} */
 /* team ************************************************************************/
 .team {
   background-color: var(--secondary-background);
