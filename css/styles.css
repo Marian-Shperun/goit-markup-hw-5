@@ -415,7 +415,8 @@ img {
   border-radius: 50%;
   fill: var(--icon-color);
 
-  transition: all 0.4s ease;
+  transition: fill 250ms, background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-link:hover,
 .soc-link:focus {
@@ -500,7 +501,6 @@ img {
 .img-wrapper:hover .portfolio-overlay {
   transform: translateY(0);
   opacity: 1;
-  /* z-index: 1; */
 }
 
 .img-wrapper {
@@ -524,7 +524,6 @@ img {
   opacity: 1;
   transition: transform 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  /* z-index: -1; */
 }
 .portfolio-overlay p {
   font-size: 18px;
@@ -584,9 +583,11 @@ img {
 }
 .footer-list .link {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link:hover,
-.link:focus {
+.footer-list .link:hover,
+.footer-list .link:focus {
   color: var(--accent-color);
 }
 .footer-soc-text {
@@ -607,4 +608,54 @@ img {
 .footer .soc-link:hover,
 .footer .soc-link:focus {
   background-color: var(--accent-color);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: relative;
+  width: 582px;
+  height: 581px;
+  background-color: #fff;
+
+  transition: transform 0.6s ease-in-out;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden .modal {
+  transform: scaleY(0);
+}
+.modal-close {
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: inherit;
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  border-radius: 50%;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
 }
