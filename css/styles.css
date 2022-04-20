@@ -142,7 +142,13 @@ img {
   transition: opacity 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.navigation-link.current::after {
+  opacity: 1;
+}
+.navigation-link:hover::after,
+.navigation-link:focus::after {
+  opacity: 1;
+}
 
 .navigation-link {
   display: inline-block;
@@ -197,6 +203,9 @@ img {
 .auth-link:hover .auth-link-icon,
 .auth-link:hover .auth-link-icon {
   transform: scale(1.2);
+}
+.current {
+  color: var(--accent-color);
 }
 /* HERO *************************************************************************/
 .hero {
